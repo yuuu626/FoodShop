@@ -25,9 +25,6 @@ jobs:
         run: |
           npm install
           npm run build
-      - name: Remove old dist folder
-        run: |
-          rm -rf dist
       # 步驟三：部署
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
