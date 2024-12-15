@@ -19,7 +19,7 @@
       />
     </v-toolbar>
 
-    <v-list>
+    <v-list v-model:opened="open">
       <template
         v-for="(menu, index) in drawMenus"
         :key="index"
@@ -63,7 +63,7 @@ const drawMenus = computed(() => {
     { title:'Resturant', icon:'mdi-silverware-fork-knife', items:['Food Menu', 'Resturant Two Column', 'Search Restutant'],open: false}
   ]
 })
-
+const open = ref(['Dashboards'])
 const props = defineProps({
   modelValue:{
     type:Boolean,
